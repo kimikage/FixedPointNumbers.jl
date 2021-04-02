@@ -4,8 +4,8 @@ on:
   create:
     tags:
   push:
-    branches:
-      - master
+    #branches:
+    #  - master
   pull_request:
   schedule:
     - cron: '20 00 1 * *'
@@ -16,8 +16,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        julia-version: ['1.0', '1', 'nightly']
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        #julia-version: ['1.0', '1', 'nightly']
+        #os: [ubuntu-latest, windows-latest, macOS-latest]
+        julia-version: ['nightly']
+        os: [macos-10.15]
         julia-arch: [x64]
         # only test one 32-bit job
         include:
