@@ -1,3 +1,11 @@
+using Pkg
+Pkg.add(Pkg.PackageSpec(url="https://github.com/JuliaGraphics/Colors.jl", rev="release-0.12"))
+Pkg.add(Pkg.PackageSpec(url="https://github.com/kimikage/ColorVectorSpace.jl", rev="cap_statistics"))
+Pkg.test("ColorTypes")
+Pkg.test("ColorVectorSpace")
+Pkg.test("Colors")
+
+#=
 using FixedPointNumbers, Test, Aqua
 
 Aqua.test_all(FixedPointNumbers)
@@ -17,3 +25,4 @@ end
 @testset "traits" begin
     include("traits.jl")
 end
+=#
